@@ -1,13 +1,9 @@
 # Building Micro Frontend with Single Spa
 
 
-This code goes along with the blog post [Building Micro Frontends with React, Vue, and Single-spa](https://dev.to/dabit3/building-micro-frontends-with-react-vue-and-single-spa-52op) on [Dev.to](https://dev.to)
-
-## Getting started
-
 **1. Setup your project**
 
-```sh
+```
 mkdir <project_name> && cd <project_name>
 
 npm init
@@ -312,10 +308,17 @@ angular
     })
 });
 ```
-# Register your app in single-spa-configs of your main folder
+
+
+!!! Dont forget to register your app in single-spa-configs of your main folder!!!
 
 # Run your app
 
 ```
 npm start
 ```
+
+
+Renders both apps : http://localhost:8080/
+
+Renders only one app : http://localhost:8080/appname
