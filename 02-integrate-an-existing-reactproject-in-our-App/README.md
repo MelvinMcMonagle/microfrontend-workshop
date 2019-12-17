@@ -1,9 +1,6 @@
 # Building Micro Frontends with React, Vue, and Single-spa 
 
-## Getting started
-
-
-2. Install dependencies
+1. Install dependencies
 
 ```
 yarn
@@ -13,13 +10,13 @@ yarn
 npm install
 ```
 
-3. Start the app
+2. Start the app
 
 ```sh
 npm start
 ```
 
-4. Visit the following URLS:
+3. Visit the following URLS:
 
 ```sh
 # renders both apps
