@@ -1,7 +1,7 @@
-# Building a Simple Microfrontend-Architecture with Single Spa
+# Building Micro Frontend with Single Spa
 
 
-
+This code goes along with the blog post [Building Micro Frontends with React, Vue, and Single-spa](https://dev.to/dabit3/building-micro-frontends-with-react-vue-and-single-spa-52op) on [Dev.to](https://dev.to)
 
 ## Getting started
 
@@ -16,7 +16,7 @@ npm install --save single-spa @babel/core @babel/preset-env
 @babel/preset-react @babel/plugin-syntax-dynamic-import @babel/plugin-proposal-object-rest-spread --save-dev
 
 npm install webpack webpack-dev-server clean-webpack-plugin webpack-cli 
-style-loader css-loader html-loader babel-loader --save-dev
+style-loader css-loader html-loader babel-loader sass sass-loader --save-dev
 
 
 ```
@@ -214,6 +214,104 @@ export const unmount = [
 ];
 ```
 
+**THE ANGULAR WAY**
+
+Setup Angular Basic Setup
+
+``` 
+mkdir src/angularJS
+cd src/angularJS
+touch angularJS.app.js root.component.js root.template.html routes.js app.module.js gifs.component.js gifs.template.html
+```
+Set up  Angular Lifecycles in angularJS.app.js
+``` 
+import singleSpaAngularJS from 'single-spa-angularjs';
+import angular from 'angular';
+import './app.module.js';
+import './routes.js';
+const domElementGetter = () => document.getElementById('angularJS');
+const angularLifecycles = singleSpaAngularJS({
+  angular,
+  domElementGetter,
+  mainAngularModule: 'angularJS-app',
+  uiRouter: true,
+  preserveGlobal: false,
+})
+export const bootstrap = [
+  angularLifecycles.bootstrap,
+];
+export const mount = [
+  angularLifecycles.mount,
+];
+export const unmount = [
+  angularLifecycles.unmount,
+];
+```
+Set up Angular AngularJS App
+
+app.module.js
+``` 
+import angular from 'angular';
+import 'angular-ui-router';
+angular
+.module('angularJS-app', ['ui.router']);
+``` 
+root.component.js
+
+```
+import angular from 'angular';
+import template from './root.template.html';
+angular
+.module('angularJS-app')
+.component('root', {
+  template,
+})
+```
+
+root.template.html
+``` 
+<div ng-style='vm.styles'>
+  <div class="container">
+    <div class="row">
+      <h4 class="light">
+        Angular 1 example
+      </h4>
+      <p class="caption">
+        This is a sample application written with Angular 1.5 and angular-ui-router.
+      </p>
+    </div>
+    <div>
+    <!-- These Routes will be set up in the routes.js file -->
+      <a class="waves-effect waves-light btn-large" href="/angularJS/gifs" style="margin-right: 10px">
+        Show me cat gifs
+      </a>
+      <a class="waves-effect waves-light btn-large" href="/angularJS" style="margin-right: 10px">
+        Take me home
+      </a>
+    </div>
+    <div class="row">
+      <ui-view />
+    </div>
+  </div>
+</div>
+```
+routes.js 
+``` 
+import angular from 'angular';
+angular
+.module('angularJS-app')
+.config(($stateProvider, $locationProvider) => {
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false,
+  });
+  $stateProvider
+    .state('root', {
+      url: '/angularJS',
+      template: '<root />',
+    })
+});
+```
 # Register your app in single-spa-configs of your main folder
 
 # Run your app
