@@ -1,7 +1,7 @@
-# Building Micro Frontend with Single Spa
+# Building a Simple Microfrontend-Architecture with Single Spa
 
 
-This code goes along with the blog post [Building Micro Frontends with React, Vue, and Single-spa](https://dev.to/dabit3/building-micro-frontends-with-react-vue-and-single-spa-52op) on [Dev.to](https://dev.to)
+
 
 ## Getting started
 
@@ -139,9 +139,9 @@ start();
 
 # Build your application
 
-1) Define application livecycles
+**Define application livecycles**
 
-Vue:
+**THE VUE WAY:**
 
 Create a file at the same level as your main.js/ts called main.vue
 ```
@@ -172,7 +172,7 @@ export const mount = vueLifecycles.mount;
 export const unmount = vueLifecycles.unmount;
 ```
 
-React:
+**THE REACT WAY**
 
 Create a file at the same level as your main.js/ts called root.component.js
 ``` 
@@ -213,6 +213,8 @@ export const unmount = [
   reactLifecycles.unmount,
 ];
 ```
+
+# Register your app in single-spa-configs of your main folder
 
 # Run your app
 
