@@ -1,7 +1,5 @@
 # Microfrontends Workshop
 
-#01 Setup a Microfrontend Architecture
+-> 01 Build a basic setup with single-spa and integrate different kinds of frontend-frameworks
 
-#02 
-
-#03 Communicate between Microfrontends
+-> 04 Integrate a new childapplication into an microfrontend-architecture and communicate with other frontends
