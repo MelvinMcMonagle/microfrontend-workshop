@@ -26,7 +26,7 @@ export const unmount = [
 ];
 
 function createDomElement() {
-    // Make sure there is a div for us to render into
+    
     let el = document.getElementById('navBar');
 
     if (!el) {
