@@ -171,6 +171,7 @@ export const unmount = vueLifecycles.unmount;
 ```
 Extend webpack.config.js
 ```
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module: {
   rules: [
   {
