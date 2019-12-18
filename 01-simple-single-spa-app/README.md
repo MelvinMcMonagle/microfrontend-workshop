@@ -115,7 +115,7 @@ Create an index.html
 </html>
 ```
 
-Registering your applications
+Registering your applications in an single-spa.config.js file
 
 ``` 
 import { registerApplication, start } from 'single-spa'
