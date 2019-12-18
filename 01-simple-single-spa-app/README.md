@@ -8,7 +8,7 @@ mkdir <project_name> && cd <project_name>
 
 npm init
 
-npm install --save single-spa @babel/core @babel/preset-env
+npm install single-spa @babel/core @babel/preset-env
 @babel/preset-react @babel/plugin-syntax-dynamic-import @babel/plugin-proposal-object-rest-spread --save-dev
 
 npm install webpack webpack-dev-server clean-webpack-plugin webpack-cli 
