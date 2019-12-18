@@ -185,7 +185,7 @@ plugins: [new VueLoaderPlugin()]
 
 **THE REACT WAY**
 
-Create a file at the same level as your main.js/ts called root.component.js
+Create a file called root.component.js
 ``` 
 import React from "react"
 
@@ -193,7 +193,7 @@ const App = () => <h1>Hello from React</h1>
 
 export default App
 ```
-Extend your main.js/ts
+Create a file main.app.js
 
 ``` 
 import React from 'react';
