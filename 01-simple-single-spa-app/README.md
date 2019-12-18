@@ -18,11 +18,12 @@ style-loader css-loader html-loader babel-loader sass sass-loader --save-dev
 ```
 Install your favorite framework dependencies:
 ``` 
-VueJs: npm install single-spa-vue vue systemjs-webpack-interop --save-dev 
+VueJs: npm install single-spa-vue vue systemjs-webpack-interop --save
+       npm install vue-loader vue-template-compiler --save-dev
 
-React: npm install single-spa-react react react-dom --save-dev
+React: npm install single-spa-react react react-dom react-router-dom react-transition-group --save
 
-AngularJs: npm install angular angular-ui-router single-spa-angularjs --save-dev
+AngularJs: npm install angular angular-ui-router single-spa-angularjs --save
 
 ...
 ``` 
@@ -111,6 +112,7 @@ Create an index.html
     <div id="app1"></div>
     <div id="app2"></div>
     <div id="app3"></div>
+    <script src="/dist/single-spa.config.js"></script>
   </body>
 </html>
 ```
@@ -166,6 +168,18 @@ const vueLifecycles = singleSpaVue({
 export const bootstrap = vueLifecycles.bootstrap;
 export const mount = vueLifecycles.mount;
 export const unmount = vueLifecycles.unmount;
+```
+Extend webpack.config.js
+```
+module: {
+  rules: [
+  {
+    test:/\.vue$/,
+    loader: 'vue-loader'
+  }
+  ]
+}
+plugins: [new VueLoaderPlugin()]
 ```
 
 **THE REACT WAY**
