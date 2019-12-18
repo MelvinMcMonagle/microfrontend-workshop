@@ -1,4 +1,4 @@
-# Building Micro Frontends with React, Vue, and Single-spa 
+# Integrate a third application in the basic setup
 
 1. Install dependencies
 
