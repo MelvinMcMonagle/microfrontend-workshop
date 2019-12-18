@@ -139,7 +139,7 @@ start();
 
 **THE VUE WAY:**
 
-Create a root-file root.component.js 
+Create a root-file main.vue
 ```
 
 <template>
@@ -149,7 +149,7 @@ Create a root-file root.component.js
 </template>
 
 ```
-Create your main.js/ts
+Create your vue.app.js
 
 ``` 
 import Vue from 'vue';
