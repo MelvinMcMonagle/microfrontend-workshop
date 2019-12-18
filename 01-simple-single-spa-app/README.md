@@ -10,7 +10,7 @@ npm init
 
 npm install babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-syntax-dynamic-import @babel/plugin-proposal-object-rest-spread --save-dev
 
-npm install webpack webpack-dev-server clean-webpack-plugin webpack-cli style-loader css-loader html-loader --save-dev
+npm install webpack webpack-dev-server clean-webpack-plugin webpack-cli html-loader --save-dev
 
 
 ```
