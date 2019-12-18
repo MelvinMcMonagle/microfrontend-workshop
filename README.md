@@ -4,4 +4,6 @@
 
 **Task 2** Integrate a new childapplication into an microfrontend-architecture and communicate with other frontends (04)
 
+Optional:
+
 **Task 3** Integrate the appkit in your local microfrontend-application
