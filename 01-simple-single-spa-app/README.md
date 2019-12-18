@@ -8,11 +8,9 @@ mkdir <project_name> && cd <project_name>
 
 npm init
 
-npm install @babel/core @babel/preset-env
-@babel/preset-react @babel/plugin-syntax-dynamic-import @babel/plugin-proposal-object-rest-spread --save-dev
+npm install babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-syntax-dynamic-import @babel/plugin-proposal-object-rest-spread --save-dev
 
-npm install webpack webpack-dev-server clean-webpack-plugin webpack-cli 
-style-loader css-loader html-loader babel-loader sass sass-loader --save-dev
+npm install webpack webpack-dev-server clean-webpack-plugin webpack-cli style-loader css-loader html-loader --save-dev
 
 
 ```
@@ -155,8 +153,7 @@ Create your vue.app.js
 
 ``` 
 import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
+import App from './main.vue';
 import singleSpaVue from 'single-spa-vue';
 const vueLifecycles = singleSpaVue({
   Vue,
