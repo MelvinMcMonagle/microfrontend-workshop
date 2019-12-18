@@ -8,7 +8,7 @@ mkdir <project_name> && cd <project_name>
 
 npm init
 
-npm install single-spa @babel/core @babel/preset-env
+npm install @babel/core @babel/preset-env
 @babel/preset-react @babel/plugin-syntax-dynamic-import @babel/plugin-proposal-object-rest-spread --save-dev
 
 npm install webpack webpack-dev-server clean-webpack-plugin webpack-cli 
@@ -18,12 +18,12 @@ style-loader css-loader html-loader babel-loader sass sass-loader --save-dev
 ```
 Install your favorite framework dependencies:
 ``` 
-VueJs: npm install single-spa-vue vue systemjs-webpack-interop --save
+VueJs: npm install single-spa single-spa-vue vue systemjs-webpack-interop --save
        npm install vue-loader vue-template-compiler --save-dev
 
-React: npm install single-spa-react react react-dom react-router-dom react-transition-group --save
+React: npm install single-spa single-spa-react react react-dom react-router-dom react-transition-group --save
 
-AngularJs: npm install angular angular-ui-router single-spa-angularjs --save
+AngularJs: npm install single-spa angular angular-ui-router single-spa-angularjs --save
 
 ...
 ``` 
