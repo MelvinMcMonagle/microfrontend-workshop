@@ -153,18 +153,28 @@ Create your vue.app.js
 
 ``` 
 import Vue from 'vue';
-import App from './main.vue';
 import singleSpaVue from 'single-spa-vue';
+import Hello from './main.vue'
+
 const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
-    render: h => h(App),
-    router,
-  },
+    el: '#vue',
+    render: r => r(Hello)
+  }
 });
-export const bootstrap = vueLifecycles.bootstrap;
-export const mount = vueLifecycles.mount;
-export const unmount = vueLifecycles.unmount;
+
+export const bootstrap = [
+  vueLifecycles.bootstrap,
+];
+
+export const mount = [
+  vueLifecycles.mount,
+];
+
+export const unmount = [
+  vueLifecycles.unmount,
+];
 ```
 Extend webpack.config.js
 ```
